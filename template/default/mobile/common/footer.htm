@@ -1,0 +1,15 @@
+</div>
+<!--{hook/global_footer_mobile}-->
+<div class="ft">
+	<p style="direction: ltr; text-align: right;"><a href="$_G['setting']['siteurl']" target="_blank">$_G['setting']['sitename']</a></p>
+	<p style="direction: ltr; text-align: right;">Powered by <strong><a href="http://www.discuz.net" target="_blank">Discuz!</a></strong> <em>$_G['setting']['version'] (<a title="ULP:20140205 by Nurqut Team" target="_blank" href="http://www.nurqut.net">NurQut Team</a>)</em></p>
+	<p><a href="$nav">{lang homepage}</a><span class="pipe">|</span>{lang no_simplemobiletype}<span class="pipe">|</span><a href="{$_G['setting']['mobile']['simpletypeurl'][2]}" class="xw0" title="{lang mobile2version}">{lang mobile2version}</a><span class="pipe">|</span><a href="{$_G['setting']['mobile']['nomobileurl']}" class="xw0" title="{lang nomobiletype}">{lang nomobiletype}</a></p>
+</div>
+</body>
+</html>
+<!--{eval updatesession();}-->
+<!--{if defined('IN_MOBILE')}-->
+	<!--{eval output();}-->
+<!--{else}-->
+	<!--{eval output_preview();}-->
+<!--{/if}-->
