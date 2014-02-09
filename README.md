@@ -1,4 +1,4 @@
-discuz_x3.1_uyghur
+Discuz! X3.1 Uyghur
 ==================
 
-The Uyghur localiztion of Discuz! X3.1 by the Nurqut Team ([Nurqut.net](http://www.nurqut.net))
+The Uyghur localization of Discuz! X3.1 by the Nurqut Team ([Nurqut.net](http://www.nurqut.net))
