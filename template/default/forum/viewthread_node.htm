@@ -72,7 +72,7 @@ $postshowavatars = !($_G['setting']['bannedmessages'] & 2 && ($post['memberstatu
 				<!--{elseif $post['avatar'] && $showavatars}-->
 					<!--{if $post[mobiletype]}-->
 					<div class="mobile-type mobile-type-$post[mobiletype]">
-						<a href="misc.php?mod=mobile" tip="{lang post_from_mobile}" onmouseover="showTip(this)"></a>
+						<a></a>
 					</div>
 					<!--{/if}-->
 					<div class="avatar"{if !($_G['setting']['threadguestlite'] && !$_G['uid'])} onmouseover="showauthor(this, 'userinfo$post[pid]')"{/If}><a href="home.php?mod=space&uid=$post[authorid]" class="avtm" target="_blank">$post[avatar]</a></div>

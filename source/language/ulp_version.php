@@ -13,7 +13,7 @@ if(!defined('IN_DISCUZ')) {
 
 if(!defined('ULP_VERSION')) {
 	define('ULP_VERSION', 'X3.1');
-	define('ULP_RELEASE', '20140205');
+	define('ULP_RELEASE', '20141102');
 }
 
 ?>

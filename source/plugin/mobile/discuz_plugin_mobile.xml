@@ -11,7 +11,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[mobile/]]></item>
 			<item id="copyright"><![CDATA[Comsenz Inc.]]></item>
-			<item id="version"><![CDATA[1.3.1]]></item>
+			<item id="version"><![CDATA[1.3.6]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[mobile]]></item>
@@ -39,7 +39,7 @@
 				</item>
 			</item>
 		</item>
-		<item id="version"><![CDATA[X3.1]]></item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2]]></item>
 		<item id="language">
 			<item id="scriptlang">
 				<item id="mobile_tip_ios"><![CDATA[<a href="http://www.discuz.net/mobile.php?platform=ios">ئالىقان ئەپتە كۆرسىڭىز، تېخىمۇ راھەت!</a>]]></item>
@@ -53,6 +53,9 @@
 				<item id="mobile_fromtype_android"><![CDATA[来自: Android客户端]]></item>
 				<item id="mobile_fromtype_windowsphone"><![CDATA[来自: WindowsPhone客户端]]></item>
 				<item id="mobile_post_author_visible"><![CDATA[该帖仅作者可见]]></item>
+                <item id="mobilesign_formhash_failed"><![CDATA[formhash验证失败或未登录]]></item>
+                <item id="mobilesign_success"><![CDATA[签到成功]]></item>
+                <item id="mobilesign_failed"><![CDATA[已进行过签到]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="mobile_tips"><![CDATA[ئىككىلىك كودنى ئىشلىتىپ مۇنبەرنى زىيارەت قىلىشىڭىزنى ۋە ساقلىۋېلىشىڭىزنى تەۋسىيە قىلىمىز<br />ئىككىلىك كودنى ئىشلىتىپ مۇنبەرنى ساقلىۋېلىش ئۇسۇلى :<br />1 . مۇنبەر قوللانچىللىرىنى قاچىلىغاندىن كىيىن ئىككىلىك كودنى چىكىپ مۇنبەرنى ساقلىۋېلىڭ<br />2 . ئىككىلىك كودنى ئاپىرات مەركىزى نوقتىسىغا ئورۇنلاشتۇرۇش ئارقىلىقمۇ مۇنبەرنى ساقلىۋالالايسىز]]></item>
@@ -84,6 +87,9 @@
 				<item id="qqregmode2"><![CDATA[بار ھېساباتقا باغلاش]]></item>
 				<item id="register_validate_email_tips"><![CDATA[تىزىملاتقاندا توغرا بولغان ئېلخەت ئادرېسىنى كىرگۈزۈڭ !  تىزىملىتىپلا دەرھال ئېلخىتىڭىزنى تەكشۈرۈڭ]]></item>
 			</item>
+            <item id="installlang">
+                <item id="mobilesign"><![CDATA[微社区签到]]></item>
+            </item>
 		</item>
 		<item id="installfile"><![CDATA[install.php]]></item>
 		<item id="upgradefile"><![CDATA[upgrade.php]]></item>

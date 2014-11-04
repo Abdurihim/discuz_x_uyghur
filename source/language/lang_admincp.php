@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: lang_admincp.php 34035 2013-09-24 01:43:53Z nemohou $
+ *      $Id: lang_admincp.php 34486 2014-05-08 01:31:08Z nemohou $
  */
 
 if(!defined('IN_DISCUZ')) {
@@ -808,8 +808,6 @@ $lang = array
 	'setting_access_register_connect' => '开放QQ注册',
 	'setting_access_register_send_register_url' => '通过邮件发送注册链接',
 	'setting_access_register_send_register_url_comment' => '开启后系统会发一条注册的地址到用户的邮箱，从该地址链接过来的允许注册，同时建议UCenter中开启一个邮箱只允许注册一个帐户<br/>注意：只有在<a href="?action=setting&operation=mail">站长 - 邮件设置</a>中完成邮件设置，确保邮件能发送成功下可以开启该功能 ',
-	'setting_access_register_forge_email' => '取消注册邮箱必填',
-	'setting_access_register_forge_email_comment' => '开启后如果用户不填写注册邮箱，将自动生成一个随机邮箱地址',
 
 
 	'setting_access_register_invite_buy' => '允许充值购买邀请码',
@@ -1357,7 +1355,7 @@ $lang = array
 	'setting_profile_time_zone' => '时区',
 	'setting_profile_tips' => '<li>用户栏目分组至少必须启用一项，如果都不启用，默认为全部启用</li>',
 
-	'setting_threadprofile_tpl_tpls' => '<li>{<b>标记</b>} 不含参数的贴内用户信息标记调用。</li><li>{<b>标记</b>=<b>参数</b>} 含参数的贴内用户信息标记调用，多个参数用","分割</li><li>{<b>标记</b>}<b>HTML</b>{<b>*</b>}<b>HTML</b>{/<b>标记</b>} 当有调用内容有值时显示 {*} 前后的 HTML 内容</li><li>“<b>plugin:插件标识</b>”格式的<b>标记</b>为插件增加的贴内用户信息标记调用。插件开发人员在设计新的贴内用户信息标记前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li>',
+	'setting_threadprofile_tpl_tpls' => '<li>{<b>标记</b>} 不含参数的贴内用户信息标记调用。</li><li>{<b>标记</b>=<b>参数</b>} 含参数的贴内用户信息标记调用，多个参数用","分割</li><li>{<b>标记</b>}<b>HTML</b>{<b>*</b>}<b>HTML</b>{/<b>标记</b>} 当有调用内容有值时显示 {*} 前后的 HTML 内容</li><li>“<b>plugin:插件标识</b>”格式的<b>标记</b>为插件增加的贴内用户信息标记调用。插件开发人员在设计新的贴内用户信息标记前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li>',
 
 	'setting_numbercard' => '用户属性名片',
 	'setting_numbercard_row' => '第 {i} 列',
@@ -1589,11 +1587,15 @@ $lang = array
 	'setting_serveropti_maxonlines_comment' => '请设置合理的数值，范围 10～65535，建议设置为平均在线人数的 10 倍左右',
 	'setting_serveropti_onlinehold' => '在线保持时间(分钟)',
 	'setting_serveropti_onlinehold_comment' => '请根据访问情况设置合理的数值，访问量大的站点应当调小该数值，设置范围 5 - 60，过大或者过小的设置都有可能会增大服务器资源开销',
-	'setting_serveropti_jspath' => 'JS 文件目录',
-	'setting_serveropti_jspath_comment' => '设置站点 JS 文件的目录。当脚本目录为缓存目录时，系统会将默认目录中的 *.js 文件进行压缩然后保存到缓存目录以提高读取速度',
+	'setting_serveropti_jspath' => 'JS 文件 URL',
+	'setting_serveropti_jspath_comment' => '设置站点 JS 文件的 URL。当设置为缓存目录时，系统会将默认目录中的 *.js 文件进行压缩然后保存到缓存目录以提高读取速度',
 	'setting_serveropti_jspath_default' => '默认目录 static/js/',
 	'setting_serveropti_jspath_cache' => '缓存目录',
-	'setting_serveropti_jspath_custom' => '自定义目录',
+	'setting_serveropti_jspath_custom' => '自定义 URL',
+	'setting_serveropti_csspath' => 'CSS 文件 URL',
+	'setting_serveropti_csspath_comment' => '设置站点 CSS 文件缓存的 URL。更改此设置后您需要更新模板缓存',
+	'setting_serveropti_csspath_cache' => '缓存目录',
+	'setting_serveropti_csspath_custom' => '自定义 URL',
 	'setting_serveropti_searchctrl' => '搜索时间限制(秒)',
 	'setting_serveropti_searchctrl_comment' => '两次搜索间隔小于此时间将被禁止，0 为不限制',
 	'setting_serveropti_maxspm' => '<span class="spectitle">60 秒最大搜索次数</u></i>',
@@ -2058,7 +2060,7 @@ $lang = array
 	'setting_seccheck' => '验证设置',
 	'setting_accountguard' => '帐号保镖',
 	'setting_sec_code_tips' => '<li>使用图片作为验证码文字，图片必须包含字符“2346789BCEFGHJKMPQRTVWXY”24 个字符，且必须为 GIF 透明图片、背景透明、前景黑色，黑色为图片的第一个索引色。图片大小不限制，但建议宽度不大于验证码宽度的 1/4，高度不大于验证码高度。制作完毕后在 static/image/seccode/gif/ 下创建一个新的子目录，目录名任意，把制作完毕的 24 个 GIF 图片上传到新子目录下</li><li>使用图片作为验证码的背景，把制作好的 JPG 图片上传到 static/image/seccode/background/ 目录下，站点将随机使用里面的图片作为验证码的背景</li><li>使用 TTF 字体作为验证码文字，把下载的 TTF 英文字体文件上传到 static/image/seccode/font/en/ 目录下，站点将随机使用里面的字体文件作为验证码的文字</li><li>使用中文图片验证码前，需要把包含完整中文汉字的 TTF 中文字体文件上传到 static/image/seccode/font/ch/ 目录下，站点将随机使用里面的字体文件作为验证码的文字</li><li>系统验证码位于 source/class/seccode/ 目录中，插件验证码位于 source/plugin/插件目录/seccode/ 目录中。</li>',
-	'setting_sec_qaa_tips' => '<li>验证问题应该言简意赅，没有歧义，正常人都能够正确作答。请经常更新验证问答的问题及答案以防止被猜测！</li><li>系统验证问答位于 source/class/secqaa/ 目录中，插件验证问答位于 source/plugin/插件目录/secqaa/ 目录中。</li><li>插件开发人员在设计新的验证问答脚本前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li>',
+	'setting_sec_qaa_tips' => '<li>验证问题应该言简意赅，没有歧义，正常人都能够正确作答。请经常更新验证问答的问题及答案以防止被猜测！</li><li>系统验证问答位于 source/class/secqaa/ 目录中，插件验证问答位于 source/plugin/插件目录/secqaa/ 目录中。</li><li>插件开发人员在设计新的验证问答脚本前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li>',
 
 	'setting_sec_seclevel' => '安全验证模式',
 	'setting_sec_seclevel_comment' => '通常情况下，我们推荐您使用高级验证模式。当您站点有较多用户遇到验证码无法通过的时候，您可以使用一般验证模式',
@@ -5201,7 +5203,7 @@ $lang = array
 	'plugins_vars_variable' => '配置变量名(必填)',
 	'plugins_vars_type' => '配置类型',
 	'plugins_add' => '设计新插件',
-	'plugins_add_tips' => '<li><b>本功能仅供插件开发者使用。</b></li><li>插件开发人员在使用本功能前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li><li>警告: 不正确的插件设计或安装可能危及到整个站点的正常使用。</li>',
+	'plugins_add_tips' => '<li><b>本功能仅供插件开发者使用。</b></li><li>插件开发人员在使用本功能前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li><li>警告: 不正确的插件设计或安装可能危及到整个站点的正常使用。</li>',
 	'plugins_import' => '导入插件数据',
 	'plugins_import_ignore_version' => '允许导入老版本 Discuz! 的插件(易产生错误!!)',
 	'plugins_update_to' => '更新到 ',
@@ -5216,7 +5218,7 @@ $lang = array
 	'plugins_config_uninstallplugin' => '卸载此插件',
 	'plugins_edit' => '设计插件',
 	'plugins_edit_available' => ' (插件已启用)',
-	'plugins_edit_tips' => '<li><b>本功能仅供插件开发者使用，如果您只是安装或使用本插件，切勿修改本设置。</b></li><li>插件开发人员在使用本功能前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li><li>警告: 不正确的插件设计或安装可能危及到整个站点的正常使用。</li><li>把设计完的插件发布到<a href="http://addon.discuz.com" target="_blank">“Discuz! 应用中心”</a>分享给广大站长。</li>',
+	'plugins_edit_tips' => '<li><b>本功能仅供插件开发者使用，如果您只是安装或使用本插件，切勿修改本设置。</b></li><li>插件开发人员在使用本功能前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li><li>警告: 不正确的插件设计或安装可能危及到整个站点的正常使用。</li><li>把设计完的插件发布到<a href="http://addon.discuz.com" target="_blank">“Discuz! 应用中心”</a>分享给广大站长。</li>',
 	'plugins_edit_name' => '插件名称(name)',
 	'plugins_edit_name_comment' => '此插件的名称，中英文均可，最多 40 个字节',
 	'plugins_edit_version' => '插件版本号(version)',
@@ -5430,7 +5432,7 @@ $lang = array
 
 
 	'magics' => '道具中心',
-	'magics_tips' => '<li>系统道具位于 source/class/magic/ 目录中，插件道具位于 source/plugin/插件目录/magic/ 目录中</li><li>插件开发人员在设计新的道具前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li>',
+	'magics_tips' => '<li>系统道具位于 source/class/magic/ 目录中，插件道具位于 source/plugin/插件目录/magic/ 目录中</li><li>插件开发人员在设计新的道具前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li>',
 
 	'magics_config' => '道具基本设置',
 	'magics_config_open' => '是否打开道具中心',
@@ -5504,7 +5506,7 @@ $lang = array
 	'tasks_tips_edit' => '<li>只有任务标示为“可用”状态，会员才可能看到并参与他。</li><li>任务是可以设置开始时间的，您可以预定某个任务何时开始。如果没有设置，那么这个任务默认就是开始了。</li>',
 	'tasks_tips_add_member' => '<li>会员类任务目前包括三种：添加好友、收藏主题、使用道具，此类任务用来鼓励和引导会员使用论坛的某个功能，活跃论坛的氛围。</li><li>设置不同的完成任务条件，可以创造出适合您论坛的任务。</li>',
 	'tasks_tips_add_post' => '<li>帖子类任务目前包括三种：发新主题、发新回复、发新主题/回复。</li><li>帖子类任务如果指定了版块，那么请您注意用户组及版块的权限设置，否则有的用户申请了任务，可能由于无权在该版块发帖，而永远无法完成任务。</li><li>发新回复的任务您可以指定回复某个主题或者某个作者的主题，但请注意该主题必须存在，否则用户无法完成任务。</li>',
-	'tasks_tips_add_type' => '<li>系统任务位于 source/class/task/ 目录中，插件任务位于 source/plugin/插件目录/task/ 目录中。</li><li>插件开发人员在设计新的任务类型前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li>',
+	'tasks_tips_add_type' => '<li>系统任务位于 source/class/task/ 目录中，插件任务位于 source/plugin/插件目录/task/ 目录中。</li><li>插件开发人员在设计新的任务类型前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li>',
 	'tasks_edit' => '编辑任务',
 	'tasks_list' => '任务列表',
 	'tasks_edit_basic' => '编辑任务设置',
@@ -6212,7 +6214,7 @@ $lang = array
 	'adv_custom_edit' => '编辑自定义广告位',
 	'adv_custom_delete' => '删除此自定义广告位吗？',
 	'adv_customnamenew' => '请输入此自定义广告位的新名称:',
-	'adv_list_tip' => '<li>您可以使用“自定义广告位”在页面的任意位置添加广告位。<li>系统广告位位于 source/class/adv/ 目录中，插件广告位位于 source/plugin/插件目录/adv/ 目录中。</li><li>插件开发人员在设计新的广告位前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li><li><a href="http://union.discuz.qq.com/?ADTAG=CP.DISCUZ. ADSET.TIP1" target="_blank">Discuz!联盟</a>免费提供更丰富的广告形式，让您赚取更丰厚的广告收益，快来看看吧。</li>',
+	'adv_list_tip' => '<li>您可以使用“自定义广告位”在页面的任意位置添加广告位。<li>系统广告位位于 source/class/adv/ 目录中，插件广告位位于 source/plugin/插件目录/adv/ 目录中。</li><li>插件开发人员在设计新的广告位前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li><li><a href="http://union.discuz.qq.com/?ADTAG=CP.DISCUZ. ADSET.TIP1" target="_blank">Discuz!联盟</a>免费提供更丰富的广告形式，让您赚取更丰厚的广告收益，快来看看吧。</li>',
 	'adv_custom_target' => '自定义投放范围，输入站点根目录程序文件名(无扩展名)，多个用逗号分隔',
 
 	'adv_edit' => '编辑广告',
@@ -6690,7 +6692,7 @@ $lang = array
 	'blockstyle_add_parity' => '当前数据是否在奇数行',
 
 	'blockxml' => '第三方模块',
-	'blockxml_tips' => '<li>插件开发人员在设计新的第三方模块前请务必仔细阅读《<a href="http://dev.discuz.org/wiki" target="_blank">Discuz! 技术文库</a>》中的内容。</li>',
+	'blockxml_tips' => '<li>插件开发人员在设计新的第三方模块前请务必仔细阅读《<a href="http://open.discuz.net/?!devdoc" target="_blank">Discuz! 技术文档</a>》中的内容。</li>',
 	'blockxml_list' => '第三方模块列表',
 	'blockxml_name' => '模块名称',
 	'blockxml_signtype_no' => '不使用签名',
